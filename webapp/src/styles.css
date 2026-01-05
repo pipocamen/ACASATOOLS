@@ -1,0 +1,4 @@
+body { margin: 0; background: #fff; color: #111 }
+pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; font-size: 13px }
+button { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; background: #fff; cursor: pointer }
+a { color: #0366d6 }
