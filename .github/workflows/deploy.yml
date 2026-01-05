@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# Permissões explícitas para o GITHUB_TOKEN (necessário para push via Actions)
+# Permissões explícitas para o GITHUB_TOKEN (necessárias para push via Actions)
 permissions:
   contents: write
   pages: write
@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: true    # mantém o GITHUB_TOKEN no git config
           fetch-depth: 0
 
       - name: Setup Node
@@ -39,5 +39,4 @@ jobs:
         with:
           publish_dir: ./webapp/dist
           publish_branch: gh-pages
-          # usa o GITHUB_TOKEN com as permissões acima
           github_token: ${{ secrets.GITHUB_TOKEN }}
